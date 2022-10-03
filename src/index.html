@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./../dist/output.css" rel="stylesheet">
+    <title>Anime js</title>
+  </head>
+  <body>
+    <div
+      class="w-24 h-24 bg-transparent absolute top-44 left-48 inline-block"
+      id="animatedCircle1"
+    ></div>
+    <div
+      class="w-12 h-12 bg-transparent absolute top-80 left-8 inline-block"
+      id="animatedCircle2"
+    ></div>
+    <div
+      class="w-8 h-8 bg-transparent absolute top-72 -z-10 left-96 inline-block"
+      id="animatedCircle3"
+    ></div>
+    <div
+      class="w-16 h-16 bg-transparent absolute top-28 left-32 inline-block"
+      id="animatedCircle4"
+    ></div>
+    <div
+      class="w-24 h-24 bg-transparent inline-block absolute top-44 right-52"
+      id="animatedCircle5"
+    ></div>
+    <script
+      src="./../  node_modules/animejs/lib/anime.min.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      function animatingColor(
+        target,
+        colorA,
+        colorB,
+        colorC,
+        colorD,
+        colorE,
+        colorF
+      ) {
+        anime({
+          targets: target,
+          keyframes: [
+            {
+              backgroundColor: colorA,
+              rotateZ: 2,
+              scale: 1,
+              backgroundColor: colorF,
+              borderRadius: 0,
+              rotateZ: 45,
+              scale: 1.9,
+            },
+            {
+              backgroundColor: colorB,
+              rotateZ: 2,
+              scale: 1,
+              backgroundColor: colorE,
+              borderRadius: 0,
+              rotateZ: 45,
+              scale: 2.8,
+            },
+            {
+              backgroundColor: colorC,
+              rotateZ: 2,
+              scale: 1,
+              backgroundColor: colorD,
+              borderRadius: 0,
+              rotateZ: 45,
+              scale: 1.2,
+            },
+            {
+              backgroundColor: colorD,
+              rotateZ: 2,
+              scale: 1,
+              backgroundColor: colorC,
+              borderRadius: 0,
+              rotateZ: 45,
+              scale: 2.1,
+            },
+            {
+              backgroundColor: colorE,
+              rotateZ: 2,
+              scale: 1,
+              backgroundColor: colorB,
+              borderRadius: 0,
+              rotateZ: 45,
+              scale: 1.8,
+            },
+            {
+              backgroundColor: colorF,
+              rotateZ: 2,
+              scale: 1,
+              backgroundColor: colorA,
+              borderRadius: 0,
+              rotateZ: 45,
+              scale: 1.25,
+            },
+          ],
+          loop: true,
+          duration: 12000,
+          direction: "alternate",
+        });
+      }
+
+      window.onload = function () {
+        
+        animatingColor(
+          "#animatedCircle1",
+          "#f0c9c3",
+          "#ffc500",
+          "#dff262",
+          "#fca369",
+          "#1b9cb7",
+          "#b43a19"
+        );
+        animatingColor(
+          "#animatedCircle2",
+          "#50c9c3",
+          "#00f100",
+          "#fe6262",
+          "#ffa369",
+          "#4b6cb7",
+          "#ffec12"
+        );
+        animatingColor(
+          "#animatedCircle3",
+          "#24c9c3",
+          "#0fd500",
+          "#de1112",
+          "#dd3869",
+          "#24c9c3",
+          "#ef2a11"
+        );
+        animatingColor(
+          "#animatedCircle4",
+          " #c04848",
+          "#4b6cb7",
+          "#d53369",
+          "#dd3369",
+          "#ffc500",
+          "#fca500"
+        );
+        animatingColor(
+          "#animatedCircle5",
+          "#5f2c82",
+          "#fca500",
+          "#de6262",
+          "#d53321",
+          "#4accb9",
+          "#0fd500"
+        );
+      };
+    </script>
+  </body>
+</html>
